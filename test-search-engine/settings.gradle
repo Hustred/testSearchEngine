@@ -1,0 +1,4 @@
+rootProject.name = 'test-search-engine'
+include 'server'
+include 'client'
+

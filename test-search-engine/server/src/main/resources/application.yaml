@@ -1,0 +1,23 @@
+network:
+  port:
+    master: 8080
+    slave1: 32232
+    slave2: 32233
+
+server:
+  port: 9000
+---
+spring:
+  profiles: master
+server:
+  port: ${network.port.master}
+---
+spring:
+  profiles: slave1
+server:
+  port: ${network.port.slave1}
+---
+spring:
+  profiles: slave2
+server:
+  port: ${network.port.slave2}
